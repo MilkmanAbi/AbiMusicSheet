@@ -1,0 +1,7 @@
+//How to compile C++ Parsers for ams...
+
+// ams to TOML
+g++ -std=c++11 -O2 -o AMS_Parser_TOML AMS_Parser_TOML.cpp
+
+// ams to JSON
+g++ -std=c++11 -O2 -o AMS_Parser_JSON AMS_Parser_JSON.cpp
