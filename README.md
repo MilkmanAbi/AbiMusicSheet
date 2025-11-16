@@ -10,6 +10,8 @@ So I made **a human-readable coded music sheet language** that lets me write pia
 
 ## Features
 
+* New: AMS to JSON Parser, use "g++ -std=c++11 -O2 -o ams_parser ams_parser.cpp" to compile ams_parser.cpp or download the Unix executable.
+
 * **Segments:**
   Reusable blocks of music like CHORUS, VERSE, or tiny motifs.
   `(⌐■_■) Just call them whenever you want to repeat stuff.`
