@@ -89,4 +89,21 @@ AMS is **a love letter to programmer brains everywhere**:
 * Completely absurd, slightly useless, and totally fun (｡♥‿♥｡)
 
 ---
+
+## AI Usage Disclosure
+
+The **AMS spec and concept were entirely created by me** — every idea, quirk, odd design decision, and cursed spark of inspiration (￣▽￣)ノ
+
+All documentation was **hand-typed**, rewritten several times, and shaped over many days. I also worked with my sister (who actually understands music lol) because I funnily enough **failed Grade 2 music**, uh... got 39/100 for basic Piano Skills, so… yeah, backup was needed (｡•́︿•̀｡)
+
+AI was used **only** for two things:
+
+* helping design **error-checking** for the parsers
+* helping with **AMS → MIDI** implementation, because MIDI still looks like arcane wizardry to me, even after multiple YouTube deep dives, I seriously don't understand MIDI, I apologise.
+
+Every concept, idea, structure, and weird lil eccentricity in this project is **human-made**.
+It’s just a fun, personal project — nothing serious, no big agenda, just vibes and curiosity (๑˃ᴗ˂)ﻭ
+
+---
+
 ## I'm dumb, made this absolute nonsense for fun T^T
