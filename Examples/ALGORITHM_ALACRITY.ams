@@ -1,0 +1,131 @@
+// ===================================================
+// ALGORITHM ALACRITY (Parser Fixed)
+// ===================================================
+
+Title: "Algorithm Alacrity"
+Composer: "KKDevBoi"
+Key: A
+Tempo: 160
+TimeSignature: 4/4
+Difficulty: 5
+
+// Fixed: Removed semicolons to match Ode_To_Joy.ams format
+Map { 
+    Key: A
+    Scale: HarmonicMinor
+}
+
+Settings {
+    Octave.LEFT(2)
+    Octave.RIGHT(4)
+}
+
+// ============================================
+// MACROS
+// ============================================
+
+Define ARP_Am { 1.s, 3.s, 5.s, 1^1.s }
+Define ARP_Dm { 4.s, 6.s, 1^1.s, 4^1.s }
+Define ARP_E  { 5.s, 7.s, 2^1.s, 5^1.s }
+Define ARP_F  { 6.s, 1^1.s, 3^1.s, 6^1.s }
+Define RUN_DOWN { 1^1.s, 7.s, 6.s, 5.s, 4.s, 3.s, 2.s, 1.s }
+
+// ============================================
+// SEGMENTS
+// ============================================
+
+Segment(1, INTRO_STORM) {
+    Tempo(160)
+    
+    Begin.LEFT {
+        SYNC()
+        Pedal.DOWN;
+        1.1^-1.w || 6^-1.6^-2.w || 4^-1.4^-2.w || 5^-1.5^-2.h, 5^-1.5^-2.h
+    }
+    
+    Begin.RIGHT {
+        SYNC()
+        Dynamic(mf) {
+            Use(ARP_Am), Use(ARP_Am), Use(ARP_Am), Use(ARP_Am) ||
+            Use(ARP_F),  Use(ARP_F),  Use(ARP_F),  Use(ARP_F)  ||
+            Use(ARP_Dm), Use(ARP_Dm), Use(ARP_Dm), Use(ARP_Dm) ||
+            Use(ARP_E),  Use(ARP_E),  RUN_DOWN
+        }
+    }
+    END;
+}
+
+Segment(2, THE_MAIN_THEME) {
+    Begin.LEFT {
+        SYNC()
+        Pedal.CHANGE;
+        1.e, 5.e, 1^1.e, 5.e, 3.e, 5.e, 1^1.e, 5.e ||
+        6^-1.e, 3.e, 6.e, 3.e, 1.e, 3.e, 6.e, 3.e  ||
+        5^-1.e, 2.e, 5.e, 2.e, 7^-1.e, 2.e, 5.e, 2.e
+    }
+
+    Begin.RIGHT {
+        SYNC()
+        Dynamic(f) {
+            1^1.!, 3^1.!, 5^1.!, 1^2.e > || 
+            6^1.!, 4^1.!, 1^2.q >        ||
+            7.!, 2^1.!, 4^1.!, 5^1.h ~
+        }
+    }
+    END;
+}
+
+Segment(3, HAND_SWAP_CHAOS) {
+    Tempo(165)
+    
+    Begin.LEFT {
+        SYNC()
+        Position(4)
+        Dynamic(ff) {
+            1.!, 2.!, 3.!, 4.! || 3.!, 2.!, 1.!, 7^-1.!
+        }
+    }
+    
+    Begin.RIGHT {
+        SYNC()
+        Position(2)
+        1.3.5.q, 1.3.5.q, 1.3.5.q, 1.3.5.q || 
+        5.7.2.q, 5.7.2.q, 5.7.2.q, 5.7.2.q
+    }
+    END;
+}
+
+Segment(4, FINALE) {
+    Tempo(150)
+    
+    Begin.LEFT {
+        SYNC()
+        Position(1)
+        Pedal.DOWN;
+        1.1^1.w || 5.5^1.w || 1.1^1.1^2.w
+    }
+    
+    Begin.RIGHT {
+        SYNC()
+        Position(5)
+        1.3.5.1^1.w || 7^-1.2.4.5.w || 
+        Trill(1, 2) { 1.3.5.1^1.w }
+    }
+    END;
+}
+
+// ============================================
+// MAIN EXECUTION
+// ============================================
+Main() {
+    Segment(1, INTRO_STORM);
+    Segment(2, THE_MAIN_THEME);
+    
+    Repeat(2) {
+       Segment(2, THE_MAIN_THEME);
+    }
+    
+    Segment(3, HAND_SWAP_CHAOS);
+    Segment(1, INTRO_STORM);
+    Segment(4, FINALE);
+}
