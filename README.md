@@ -138,4 +138,9 @@ It’s just a fun, personal project — nothing serious, no big agenda, just vib
 
 ---
 
+## Future Plans
+
+This project might use Python-like syntax, or, more likely, C++-like syntax, since I use C++ almost exclusively...
+
+---
 ## I'm dumb, made this absolute nonsense for fun T^T
