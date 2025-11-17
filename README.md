@@ -80,6 +80,36 @@ Repeat(2){ Segment(1, CHORUS); }
 
 ---
 
+## Playing MIDI Files.
+
+Use either a MIDI software of your choice or to play MIDI files with VLC, load a SoundFont (SF2). VLC uses FluidSynth, so it will not play MIDI unless a SoundFont is selected.
+
+## 1. Open VLC
+
+Open the VLC media player.
+
+## 2. Go to Preferences
+
+Tools → Preferences
+At the bottom-left, set:
+Show Settings → All
+
+## 3. Configure FluidSynth
+
+Navigate to:
+Input / Codecs → Audio codecs → FluidSynth
+
+Find the field named:
+SoundFont
+
+Click Browse and select your `.sf2` file.
+
+## 4. Save and restart VLC
+
+VLC must be restarted for the settings to take effect.
+
+---
+
 ## Philosophy
 
 AMS is **a love letter to programmer brains everywhere**:
