@@ -1,3 +1,5 @@
+## !! Warning !! The AMS JSON and TOML parsers may cause horrid memory leaks, this is a weird issue I've noticed. The MIDI converter works perfectly.
+
 # AbiMusicSheet (AMS)
 
 **AbiMusicSheet (AMS)** is a completely **nonsensical, quirky project** I made for fun. I’m a programmer who can read pseudocode effortlessly but, for the life of me, cannot read traditional piano sheet music (┐(´д｀)┌).
